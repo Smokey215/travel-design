@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Homework</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- Main -->
+    <main class="w-full lg:px-12 md:px-12">
+      <!-- Header -->
+      <h1 class="font-bold text-2xl">CSS Utility Simulator</h1>
+
+      <p class="text-gray-600 mt-2">
+        Change the inputs below to see how automatic classes combine to build
+        UIs.
+      </p>
+
+      <!-- Navbar -->
+      <nav
+        class="bg-black text-white mt-2 p-3 flex items-center justify-between sticky top-0 z-50"
+      >
+        <!-- Logo -->
+        <h2 class="font-bold text-lg">MyLogo</h2>
+
+        <!-- Hamburger Button -->
+        <button id="menuButton" class="md:hidden text-2xl">☰</button>
+
+        <!-- Menu -->
+        <div
+          id="menu"
+          class="hidden absolute top-10 left-0 w-full space-y-4 bg-gray-400 text-white text-center font-bold flex-col md:static md:flex md:flex-row md:w-auto md:bg-transparent gap-12 p-4 md:p-0"
+        >
+          <p class="cursor-pointer hover:underline">Home</p>
+          <p class="cursor-pointer hover:underline">About</p>
+          <p class="cursor-pointer hover:underline">Contact</p>
+        </div>
+      </nav>
+
+      <!-- Features -->
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 text-lg">
+        <div class="bg-blue-200 text-center p-5 rounded-lg shadow">
+          Feature 1
+        </div>
+
+        <div class="bg-blue-200 text-center p-5 rounded-lg shadow">
+          Feature 2
+        </div>
+
+        <div class="bg-blue-200 text-center p-5 rounded-lg shadow">
+          Feature 3
+        </div>
+      </div>
+
+      <!-- Two Sections -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+        <!-- Left Section -->
+        <section class="bg-blue-50 rounded-lg p-10 space-y-3 shadow">
+          <h2 class="font-bold text-lg">Utility Controls</h2>
+
+          <label for="padding" class="block mb-1"> Padding (Spacing) </label>
+
+          <select
+            id="padding"
+            class="w-full rounded-lg border p-1 ring-1 ring-black"
+          >
+            <option>Small (p-4)</option>
+          </select>
+
+          <label class="block mb-1"> Background Theme (Colors) </label>
+
+          <select class="w-full rounded-lg border p-1 ring-1 ring-black">
+            <option>Primary Blue</option>
+          </select>
+
+          <label class="block mb-1"> Text Size (Typography) </label>
+
+          <select class="w-full rounded-lg border p-1 ring-1 ring-black">
+            <option>Large (text-xl)</option>
+          </select>
+
+          <label class="block mb-1"> Corner Radius (Borders) </label>
+
+          <select class="w-full rounded-lg border p-1 ring-1 ring-black">
+            <option>Rounded (rounded-lg)</option>
+          </select>
+
+          <label class="block mb-1"> Shadow (Depth) </label>
+
+          <select class="w-full rounded-lg border p-1 ring-1 ring-black">
+            <option>Medium (shadow-md)</option>
+          </select>
+        </section>
+
+        <!-- Right Section -->
+        <section class="space-y-5 flex flex-col">
+          <!-- Card Preview -->
+          <div
+            class="bg-gray-300 rounded-lg flex justify-center items-center p-6"
+          >
+            <div
+              class="bg-blue-700 text-white my-16 px-20 py-8 rounded-lg shadow-md w-full sm:w-4/5"
+            >
+              <h1 class="text-xl font-bold">Alex Walker</h1>
+
+              <p class="mt-2 opacity-90">
+                Full-Stack Web Developer building awesome things with Tailwind
+                CSS.
+              </p>
+            </div>
+          </div>
+
+          <!-- HTML Output -->
+          <div
+            class="relative bg-slate-900 text-green-400 border border-slate-700 text-sm rounded-lg shadow-md p-6 overflow-auto"
+          >
+            <!-- Label -->
+            <span
+              class="absolute top-0 right-0 bg-slate-700 text-slate-300 text-xs p-2 rounded"
+            >
+              HTML Output
+            </span>
+
+            <!-- Code -->
+            <div class="mt-6 text-xs leading-6">
+              &lt;div class="p-4 bg-blue-600 text-white border border-blue-700
+              text-xl rounded-lg shadow-md"&gt;
+              <br />
+
+              &nbsp;&nbsp;&lt;h3 class="font-bold mb-2"&gt; Alex Walker
+              &lt;/h3&gt;
+              <br />
+
+              &nbsp;&nbsp;&lt;p class="opacity-80"&gt; Full-Stack Web Developer
+              building awesome things with Tailwind CSS. &lt;/p&gt;
+              <br />
+
+              &lt;/div&gt;
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Buttons -->
+      <div
+        class="flex flex-col sm:flex-row gap-4 mt-6 items-start sm:items-center"
+      >
+        <button
+          class="bg-blue-600 text-white px-5 py-2 rounded-md hover:scale-110 transition duration-100"
+        >
+          Submit
+        </button>
+
+        <span class="text-blue-700 font-semibold cursor-pointer hover:underline">
+          Read More
+        </span>
+
+        <button
+          class="bg-blue-600 text-white px-5 py-2 rounded-md hover:scale-110 transition duration-100"
+        >
+          Hover me Slowly
+        </button>
+      </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+      const menuButton = document.getElementById("menuButton");
+      const menu = document.getElementById("menu");
+
+      menuButton.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

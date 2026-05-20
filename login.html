@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadoo Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-blue-100 flex justify-center items-center min-h-screen">
+    <div
+      class="bg-white rounded-2xl p-8 space-y-7 md:p-8 max-w-md shadow-2xl shadow-gray-700"
+    >
+      <div class="flex flex-col items-center space-y-5">
+        <span class="bg-slate-300 bg-opacity-50 rounded-xl p-3">
+          <img src="lock.png" alt="lock" class="h-10 w-10" />
+        </span>
+        <div class="space-y-3">
+          <h2 class="font-extrabold text-2xl md:text-3xl text-center">
+            Welcome Back
+          </h2>
+          <p class="text-md md:text-md opacity-70 text-center">
+            Enter your credentials to accept your account
+          </p>
+        </div>
+      </div>
+      <!-- email + address -->
+      <form action="" class="space-y-5">
+        <div class="font-bold text-lg">Email Address</div>
+        <input
+          type="text"
+          value="name@company.com"
+          class="opacity-50 p-2 border border-gray-500 rounded-lg w-full bg-slate-300"
+        />
+        <div class="font-bold text-lg">Password</div>
+        <input
+          type="text"
+          value="******"
+          class="opacity-50 p-2 border border-gray-500 rounded-lg w-full bg-slate-300"
+        />
+        <!-- -->
+        <div class="flex items-start justify-between">
+          <div class="flex gap-2 items-center">
+            <input type="checkbox" class="w-4 h-4"/>
+            <p>Remember me</p>
+          </div>
+          <div class="text-blue-600 hover:underline font-semibold">
+            Forgot Password?
+          </div>
+        </div>
+        <button
+          class="bg-blue-700 w-full text-white py-2 font-semibold rounded-xl"
+        >
+          Log In
+        </button>
+        <div class="flex justify-center space-x-1">
+          <p>Don't have any account yet?</p>
+          <p class="text-blue-700 font-semibold">
+            <a href="signup.html">Sign up for free</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
