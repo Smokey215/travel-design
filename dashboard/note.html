@@ -6,9 +6,12 @@
     <title>Note</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="min-h-screen flex">
+
+  <body class="min-h-screen flex bg-gray-50">
     <!-- aside -->
-    <aside class="w-1/5 px-10 py-5 flex flex-col justify-between bg-slate-200">
+    <aside
+      class="hidden lg:flex w-1/5 px-10 py-5 flex-col justify-between bg-slate-200"
+    >
       <div class="space-y-10">
         <div class="flex gap-1">
           <img
@@ -16,24 +19,28 @@
             alt="leaf"
             class="w-14 h-14 bg-green-200 rounded-xl p-2"
           />
-          <div class="">
+          <div>
             <h2 class="text-xl text-green-800">QuietMind</h2>
             <p>Beginner's Heaven</p>
           </div>
         </div>
+
         <div class="space-y-5">
           <div
             class="bg-green-900 text-white py-2 w-full text-center rounded-3xl font-bold text-lg bg-opacity-80"
           >
             + New Note
           </div>
+
           <p class="font-semibold opacity-50">LIBRARY</p>
+
           <div
             class="flex hover:bg-green-800 bg-opacity-50 gap-4 w-full rounded-xl p-4"
           >
             <img src="image/note.png" alt="note" class="w-7 h-7" />
             <p>Notes</p>
           </div>
+
           <div
             class="flex hover:bg-green-800 bg-opacity-50 gap-4 w-full rounded-xl p-4"
           >
@@ -41,168 +48,239 @@
             <p>Categories</p>
           </div>
         </div>
+
         <div>
           <span class="font-semibold opacity-50">FAVORITES</span>
+
           <div>
-            <div class="">
-              <span class="text-green-900 font-bold text-7xl pr-2">.</span
-              >Personal
-            </div>
             <div>
-              <span class="text-green-600 font-bold text-7xl pr-2">.</span
-              >Creative Work
+              <span class="text-green-900 font-bold text-7xl pr-2">.</span>
+              Personal
+            </div>
+
+            <div>
+              <span class="text-green-600 font-bold text-7xl pr-2">.</span>
+              Creative Work
             </div>
           </div>
         </div>
       </div>
+
       <div class="py-10 space-y-5">
         <div class="flex gap-3">
           <img src="image/setting.png" alt="setting" class="w-5 h-5" />
           <span>Settings</span>
         </div>
+
         <div class="flex gap-3">
           <img src="image/archive.png" alt="archive" class="w-5 h-5" />
           <span>Archive</span>
         </div>
+
         <div class="flex gap-3">
           <img src="image/help.png" alt="help" class="w-5 h-5" />
           <span>Help</span>
         </div>
       </div>
     </aside>
-    <div class="">
+
+    <!-- main -->
+    <div class="flex-1">
+      <!-- navbar -->
       <div
-        class="flex justify-between bg-white border border-white shadow-md py-3 w-full pr-5 sticky top-0"
+        class="flex justify-between items-center bg-white shadow-md py-3 px-4 md:px-6 sticky top-0 z-50 gap-4"
       >
         <input
           type="text"
-          value="🔍 search your thoughts..."
-          class="bg-gray-300 bg-opacity-20 w-full text-md rounded-full p-2"
+          placeholder="🔍 Search your thoughts..."
+          class="bg-gray-200 bg-opacity-40 w-full text-sm md:text-md rounded-full p-2 outline-none"
         />
-        <div class="flex gap-5">
-          <div class="text-green-800 w-80 text-right text-lg font-bold py-2">
+
+        <div class="flex items-center gap-5">
+          <!-- hide on mobile -->
+          <div
+            class="hidden md:block text-green-800 text-lg font-bold whitespace-nowrap"
+          >
             + New Note
           </div>
-          <img src="image/humanhead.png" alt="profile" class="w-10 h-10" />
+
+          <img
+            src="image/humanhead.png"
+            alt="profile"
+            class="w-10 h-10"
+          />
         </div>
       </div>
-      <div class="flex justify-between mx-10 py-10">
+
+      <!-- hero -->
+      <div
+        class="flex flex-col xl:flex-row justify-between mx-4 md:mx-10 py-10 gap-8"
+      >
         <div class="space-y-4">
-          <h2 class="text-7xl font-semibold">Good Morning,Julian.</h2>
-          <p class="font-semibold opacity-70 text-xl">
+          <h2 class="text-3xl md:text-5xl xl:text-7xl font-semibold">
+            Good Morning, Julian.
+          </h2>
+
+          <p class="font-semibold opacity-70 text-lg md:text-xl">
             Take a breath. What is on your mind today?
           </p>
         </div>
-        <div class="flex gap-5 items-center">
+
+        <div class="flex gap-5 items-center flex-wrap">
           <div
-            class="flex bg-white border border-white shadow-md py-2 px-6 gap-2 rounded-full"
+            class="flex bg-white shadow-md py-2 px-6 gap-2 rounded-full"
           >
             <img src="image/recent.png" alt="recent" class="h-7 w-7" />
             <span class="text-lg text-green-800 font-semibold">Recent</span>
           </div>
+
           <div
-            class="flex bg-white border border-white shadow-md py-2 px-6 gap-2 rounded-full"
+            class="flex bg-white shadow-md py-2 px-6 gap-2 rounded-full"
           >
             <img src="image/layout.png" alt="layout" class="h-7 w-7" />
             <span class="text-lg text-green-800 font-semibold">Layout</span>
           </div>
         </div>
       </div>
-      <div class="flex mx-10 gap-5">
-        <div class="py-5 space-y-10">
+
+      <!-- content -->
+      <div
+        class="flex flex-col xl:flex-row mx-4 md:mx-10 gap-5 pb-24"
+      >
+        <!-- left -->
+        <div class="flex-1 py-5 space-y-10">
           <div
-            class="py-20 px-10 space-y-5 bg-slate-300 pr-60 rounded-xl bg-opacity-20"
+            class="py-10 md:py-20 px-6 md:px-10 space-y-5 bg-slate-300 rounded-xl bg-opacity-20"
           >
-            <div class="flex gap-5">
+            <div class="flex flex-wrap gap-5">
               <span
                 class="text-green-950 bg-gray-400 bg-opacity-70 rounded-full py-1 px-5"
-                >Creative Work</span
               >
+                Creative Work
+              </span>
+
               <span class="text-lg">. 2 hours ago</span>
             </div>
-            <h2 class="font-semibold text-4xl">
+
+            <h2 class="font-semibold text-2xl md:text-4xl">
               The Philosophy of Quiet Productivity
             </h2>
-            <p class="text-xl opacity-80">
+
+            <p class="text-base md:text-xl opacity-80">
               In a world that never stop shouting, there is a prefound power in
-              finding silence. <br />
+              finding silence.
+              <br />
               This morning I'm reflecting on how we can build tools that don't
               demand attention, but rather reward it...
             </p>
-            <div class="flex gap-2">
+
+            <div class="flex flex-wrap gap-2">
               <span
                 class="bg-gray-400 bg-opacity-70 font-bold text-sm py-1 px-3 rounded-full"
-                >#mindgulness</span
               >
+                #mindfulness
+              </span>
+
               <span
                 class="bg-gray-400 bg-opacity-70 font-bold text-sm py-1 px-3 rounded-full"
-                >#design-ethics</span
               >
+                #design-ethics
+              </span>
             </div>
           </div>
-          <!-- two small section -->
-          <div class="flex justify-between gap-10">
-            <section class="rounded-xl bg-slate-300 w-1/2 p-10 space-y-3">
-              <span class="bg-gray-300 font-semibold text-sm bg-opacity-70"
-                >Work</span
-              >
-              <h2 class="font-semibold text-xl">Office Redesign Notes</h2>
+
+          <!-- two small cards -->
+          <div class="flex flex-col md:flex-row gap-10">
+            <section
+              class="rounded-xl bg-slate-300 w-full md:w-1/2 p-10 space-y-3"
+            >
+              <span class="bg-gray-300 font-semibold text-sm bg-opacity-70">
+                Work
+              </span>
+
+              <h2 class="font-semibold text-xl">
+                Office Redesign Notes
+              </h2>
+
               <p class="text-lg">
                 Need to prioritize ergonomic comfort and natural light
                 diffuslo...
               </p>
             </section>
+
             <section
-              class="w-1/2 space-y-4 bg-white border border-white shadow-xl rounded-xl p-10"
+              class="w-full md:w-1/2 space-y-4 bg-white shadow-xl rounded-xl p-10"
             >
               <span
                 class="bg-gray-300 text-sm font-semibold px-2 py-1 rounded-3xl"
-                >Personal</span
               >
+                Personal
+              </span>
+
               <h2>Weekend Grocery List</h2>
+
               <div>
-                <span class="text-green-700 font-bold text-xl">.</span>Fresh
-                ginger & mint
+                <span class="text-green-700 font-bold text-xl">.</span>
+                Fresh ginger & mint
               </div>
+
               <div>
-                <span class="text-green-700 font-bold text-xl">.</span>Organic
-                honey
+                <span class="text-green-700 font-bold text-xl">.</span>
+                Organic honey
               </div>
             </section>
           </div>
         </div>
-        <div class="w-1/4 py-5 space-y-10">
+
+        <!-- right -->
+        <div class="w-full xl:w-1/4 py-5 space-y-10">
           <div
-            class="px-10 bg-white border border-white shadow-xl pb-16 py-4 space-y-7 rounded-xl"
+            class="px-10 bg-white shadow-xl pb-10 py-4 space-y-7 rounded-xl"
           >
             <div class="flex justify-between">
               <span
                 class="bg-green-200 text-green-800 font-bold text-sm py-1 px-3 rounded-full"
-                >Ideas</span
               >
+                Ideas
+              </span>
+
               <span>📌</span>
             </div>
-            <h2 class="font-semibold text-xl">Morning Ritual Ideas</h2>
+
+            <h2 class="font-semibold text-xl">
+              Morning Ritual Ideas
+            </h2>
+
             <p class="text-lg">1. Cold water therapy</p>
             <p class="text-lg">2. 5 minutes of focused breathing</p>
             <p class="text-lg">3. Tea ceremony without screens...</p>
+
             <div class="pt-5">
-              <span class="bg-gray-300 rounded-2xl font-bold text-sm py-1 px-3"
-                >#wellness</span
+              <span
+                class="bg-gray-300 rounded-2xl font-bold text-sm py-1 px-3"
               >
+                #wellness
+              </span>
             </div>
           </div>
+
           <div
-            class="px-7 space-y-5 py-8 bg-white border border-white shadow-xl rounded-xl"
+            class="px-7 space-y-5 py-8 bg-white shadow-xl rounded-xl"
           >
             <div class="flex justify-between">
               <span
                 class="bg-gray-300 rounded-3xl text-green-900 text-sm font-bold py-1 px-3"
-                >Work</span
               >
+                Work
+              </span>
+
               <span>Mar 12</span>
             </div>
-            <h2 class="text-xl font-semibold">Project Alpha Review</h2>
+
+            <h2 class="text-xl font-semibold">
+              Project Alpha Review
+            </h2>
+
             <p>
               The feedback from the initial user group was surprisingly positive
               regarding the soft-focus UI.
@@ -211,5 +289,12 @@
         </div>
       </div>
     </div>
+
+    <!-- fixed mobile button -->
+    <button
+      class="md:hidden fixed bottom-5 right-5 bg-green-800 text-white w-16 h-16 rounded-full text-4xl shadow-xl text-center"
+    >
+      +
+    </button>
   </body>
 </html>
